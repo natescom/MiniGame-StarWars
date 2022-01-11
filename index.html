@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="multibutton.css">
+</head>
+<body>
+  
+  <header class="header">
+    <a href="/index.html">🎮 Destrua a Estrela da Morte</a> <!-- LINK -->
+    <nav>
+      <ul class="menu">  <!-- LISTA -->
+        <li><a href="https://www.linkedin.com/in/nathan-ferraz-6850311a1/"> Linkedin </a></li>
+        <li><a href="https://github.com/natescom"> GitHub </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="mainPanel">
+
+    <div class=panel id="gamePanel">
+      
+      <section class="hud">
+        <p class="label" id="lbl_vida"> </p>
+        <p class="sectionTitle" id="lbl_cenario">Bem - Vindo</p>
+        <p class="label" id="lbl_turno"> </p>
+      </section>
+
+      <section class="campoDeBatalha">
+        <img id="nave" src="/images/xwing.gif" width="25%">
+        <img src="images/deathstar.gif">
+      </section>
+
+      <section class="painelDeControle">
+  
+        <div class="multi-button" id="btnPlay">
+          <button type="button" id="btn_play" onclick="startGame()" class="btn btn-info">Jogar</button> 
+        </div>
+
+        <div class="multi-button">
+          <button type="button" class="btnsDeAcao" onclick="atirar()" class="btn btn-info">Atirar</button> 
+          <button type="button" class="btnsDeAcao" onclick="acelerar()" class="btn btn-info">Acelerar</button> 
+          <button type="button" class="btnsDeAcao" onclick="desviar()" class="btn btn-info">Desviar</button>   
+        </div>
+
+      </section>
+    </div>
+
+    <div class="panel" id="logPanel">
+      <p class="sectionTitle">Log</p> 
+      <section><p class="textArea" id="log"></p></section>
+    </div>
+
+  </section>
+  <script src="script.js"></script> 
+</body>
+</html>

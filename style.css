@@ -1,0 +1,286 @@
+:root {
+  --border-size: 0.125rem;
+  --duration: 250ms;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --font-family: monospace;
+  --color-primary: white;
+  --color-secondary: black;
+  --color-tertiary: dodgerblue;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --space: 1rem;
+}
+
+body{
+  background: rgb(149, 164, 248);
+}
+
+.header{
+  background: white;
+  display: flex;                  
+  flex-wrap: wrap;                
+  justify-content: space-between; 
+  padding: 20px;                  
+  align-items: center;
+  border-bottom: 0.125rem solid black;
+  box-shadow: var(--shadow) 10px 10px;
+}
+
+.menu{
+  display: flex;
+}
+
+.menu li{
+  margin-left: 10px;
+}
+
+.menu li a{                       /*AREA DE CLIQUE*/
+  display: block;
+  padding: 10px;
+}
+
+body, ul, li{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  font-size: 1.2rem;
+  font-family: Arial;
+}
+
+a { /* LINK */
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+h1 { /* TITULOS */
+  text-align: center;
+  margin-top: 100px;
+}
+
+.panel{
+  background: white;
+  border: 0.125rem solid black;
+  box-shadow: var(--shadow) 10px 10px;
+}
+
+.panel section{
+  border-top: 0.125rem solid black;
+}
+
+.panel > section:nth-child(1){
+  border-top: 0rem;
+}
+
+.mainPanel{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#gamePanel{
+  display: flex;
+  flex-direction: column;
+  transform: translate(0%, 0%);
+  max-width: 800px;
+  min-width: 600px;
+} 
+
+.hud{
+  display: flex;
+  justify-content: space-around;
+  margin: 2% auto;
+  width: 100%;
+
+}
+
+.campoDeBatalha{
+  height: 300px;
+  background-image: url('/images/back.gif');
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  }
+
+.campoDeBatalha > img:nth-child(2){
+  width: 15%;
+  height: 30%;
+  margin-left: 85%;
+}
+
+.painelDeControle{
+  width: 100%;
+  background: white;
+}
+
+.label{
+  margin: 0px;
+  padding: 0px;
+}
+
+.sectionTitle{
+  margin: 0px;
+  padding: 0px;
+
+  color: black;
+  font-size: 1.5rem;
+  font-family: var(--font-family);
+  text-shadow: rgba(0, 0, 0, 0.1) 2px 2px;
+}
+
+.textArea{
+  max-width: 200px;
+  min-width: 200px;
+  margin: 5px;
+  font-size: 0.9rem;
+  font-family: var(--font-family);
+}
+
+
+#btnPlay{
+  position: absolute;
+  height: 58px;
+  z-index: 2;
+
+  transition: all 0.5s;
+  background-size: cover;
+}
+
+#btnPlay.hide {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+
+#nave {
+  width: 20%;
+  align-self: end;
+  position: absolute;
+}
+
+@keyframes acelerar {
+  /*
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  */
+  from {
+    margin-left: 0%;
+    width: 20%;
+  }
+  to {
+    margin-left: 65%;
+    width: 20%;
+  }
+}
+
+@keyframes desviar {
+  from {
+    margin-left: 0%;
+    width: 20%;
+  }
+
+  10%{
+    margin-bottom: 10%;
+    margin-left: 10%;
+    width: 10%;
+  }
+
+  50%{
+    margin-bottom: 2%;
+    margin-left: 25%;
+    width: 15%;
+  }
+
+  60%{
+    margin-bottom: 15%;
+    margin-left: 50%;
+    width: 5%;
+  }
+
+  80%{
+    margin-left: 65%;
+    width: 20%;
+  }
+
+  90%{
+    margin-left: 40%;
+    width: 20%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 20%;
+  }
+}
+
+@keyframes atack {
+  /*
+  animation-duration: 5s;
+  animation-iteration-count: normal;
+  animation-direction: normal;
+  */
+  from {
+    margin-left: 0%;
+    width: 20%;
+  }
+
+  30%{
+    margin-bottom: 27%;
+    margin-left: 85%;
+    width: 3%;
+  }
+
+  40%{
+    margin-bottom: 27%;
+    margin-left: 85%;
+    width: 3%;
+  }
+
+  70%{
+    margin-bottom: 5%;
+    margin-left: 75%;
+    width: 13%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 20%;
+  }
+}
+
+@keyframes atack2 {
+  /*
+  animation-duration: 5s;
+  animation-iteration-count: normal;
+  animation-direction: normal;
+  */
+  from {
+    margin-left: 1%;
+    width: 20%;
+  }
+
+  30%{
+    margin-bottom: 27%;
+    margin-left: 85%;
+    width: 3%;
+  }
+
+  40%{
+    margin-bottom: 27%;
+    margin-left: 85%;
+    width: 3%;
+  }
+
+  70%{
+    margin-bottom: 5%;
+    margin-left: 75%;
+    width: 13%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 20%;
+  }
+}
